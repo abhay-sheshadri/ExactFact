@@ -1,0 +1,12 @@
+﻿{% extends "layout.html" %}
+{% block stayhome %}
+<div id="completeContainer">
+    <div id="tableEven"><center class="about"><b class="mainText">Easily Avoid Misinformation and Bias</b><br /><br />Exact Fact points out false statements, journalists and authors with known biases, and websites with known political leanings <br /><br /><a id="Aboutbutton" href=""> Download Now </a></center><br><br><br><img class="rightImg" src="{{ url_for('static', filename='img/Main.PNG') }}"></div>
+    <div id="tableOdd"><center class="about"><b class="topText">We Find Misinformation</b><br><br>With misinformation spreading rampantly around the internet, you can be confident in our ability to find it.<br><br><br></center><img class="rightImg" src="{{ url_for('static', filename='img/Misinformation.PNG') }}"></div>
+    <div id="tableEven"><center class="about"><b class="topText">We Point Out Biased Journalists and Authors</b><br><br>Whether you are about to read an article from an author you have never heard of or a journalist gets mentioned in a heated discussion, you will be able to know if these authors and journalists hold known biases.<br><br><br></center><img class="rightImg" src="{{ url_for('static', filename='img/Journalists.PNG') }}"></div>
+    <div id="tableOdd"><center class="about"><b class="topText">We Tell You When a Website has a Known Leaning</b><br><br>Know if an article you are about to read is from a source with a known leaning so that you can take consider the information from the other side and find sources from alternate leanings, with the same feature!<br><br><br></center><img class="rightImg" src="{{ url_for('static', filename='img/Leanings.PNG') }}"></div>
+    <div id="tableEven"><center class="about"><b class="mainText">Starting Now, You Can Stay Informed the Easy Way</b><br /><br /><a id="Aboutbutton" href=""> Download Now </a></center></div>
+</div>
+{% endblock stayhome %}
+
+

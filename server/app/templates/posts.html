@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row mt-3 mb-5">
+    <div class="col-md-12">
+        <a class="btn btn-primary" href="{{ url_for('new_post') }}" role="button">Request New Entry</a>
+    </div>
+</div>
+
+{% for post in posts %}
+<div class="row">
+    <div class="col-md-12">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <p class="mr-2">By {{ post[1]["poster"] }}</p>
+                    <small class="text-muted">{{ post[1]["date"] }}</small>
+                </div>
+                <h2> <a class="article-title" href="/posts/view/{{ post[0] }}">{{ post[1]["title"] }} </a></h2>
+                <p class="article-content"> <strong>Misinformation: </strong> {{ post[1]["misinfo"] }}</p>
+                <p class="article-content"> <strong>Link: </strong> <a href="{{ post[1]['link'] }}">{{ post[1]["link"] }}</a> </p>
+                <p class="article-content"><strong>Correct Information: </strong> {{ post[1]["info"] }}</p>
+                <p class="article-content"><strong>Additional Info: </strong>{{ post[1]["additional"] }}</p>
+                <div class="row">
+                    <div class="p-1 mb-2 ml-3 mr-3 bg-success text-white" style="width:80px; height: 30px; border-radius: 45px; text-align: center;">{{ post[1]["agree"] }}</div>
+                    <div class="p-1 mb-2 bg-danger text-white" style="width:80px; height: 30px; border-radius: 45px; text-align: center;">{{ post[1]["disagree"] }}</div>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

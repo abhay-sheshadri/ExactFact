@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="">By {{ post["poster"] }} </p>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="" style="display: block; float: right" href="../add/{{ current_post_id }}">Add</a>
+                        </div>
+                    </div>
+                    <small class="text-muted">{{ post["date"] }}</small>
+                </div>
+                <h2><p class="article-title" >{{ post["title"] }}</p></h2>
+                <p class="article-content"> <strong>Misinformation: </strong> {{ post["misinfo"] }}</p>
+                <p class="article-content"> <strong>Link: </strong> <a href="{{ post['link'] }}">{{ post["link"] }}</a> </p>
+                <p class="article-content"><strong>Correct Information: </strong> {{ post["info"] }}</p>
+                <p class="article-content"><strong>Additional Info: </strong>{{ post["additional"] }}</p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div class="content-section">
+    <div class="row">
+        <div class="col-md-12">
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Comments</legend>
+                    <div class="form-group">
+                        {{ form.select.label(class="form-control-label") }}
+                        {% if form.select.errors %}
+                            {{ form.select(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.select.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.select(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.content.label(class="form-control-label") }}
+                        {% if form.content.errors %}
+                            {{ form.content(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.content.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.content(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-outline-info") }}
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {% for comment in post["comments"] %}
+    <div class="row border-top">
+        <div class="col-md-12 ">
+            <div class="card border-0 mb-2">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: 20px;">{{ comment["username"] }}  commented on "{{ post['title'] }}"</h5>
+                    {% if comment["select"] == "Agree" %}
+                    <div class="p-1 mb-2 bg-success text-white" style="width:80px; height: 30px; border-radius: 45px; text-align: center;">Agree</div>
+                    {% else %}
+                    <div class="p-1 mb-2 bg-danger text-white" style="width:80px; height: 30px; border-radius: 45px; text-align: center;">Disagree</div>
+                    {% endif%}
+                  <p class="card-text" style="font-size: 18px;">{{ comment["content"] }}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

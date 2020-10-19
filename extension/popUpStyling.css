@@ -1,0 +1,62 @@
+#misinfoScanButton {
+    background-color: #42a5f5;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: normal;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 15px;
+    margin-top: -5px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 16px;
+    width: auto;
+    color: white;
+}
+
+    #misinfoScanButton:hover {
+        background-color: #2196f3;
+        cursor: pointer;
+    }
+
+#popUpWindow {
+    width: 250px;
+    height: auto;
+}
+
+#currentStatus {
+    color: #e53935;
+    font-weight: bold;
+}
+
+#limitWarning {
+    font-style: italic;
+    font-size: 15px;
+}
+
+#pageData {
+    font-weight: bold;
+}
+
+#politicalBias {
+    font-weight: bold;
+}
+
+
+.blockTabs {
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+    font-family: Arial;
+    font-size: 16px;
+    border-bottom: 1px solid #bdbdbd;
+}

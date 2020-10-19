@@ -1,0 +1,73 @@
+.MarkUpMisinformation {
+    opacity: 1;
+    background-color: #f57c00;
+    color: white;
+}
+
+.MarkUpJournalists {
+    opacity: 1;
+    background-color: #f57c00;
+    color: white;
+}
+
+.misinfoBoxes {
+    background-color: #fafafa;
+    font-family: Arial;
+    font-size: 14px;
+    display: none;
+    min-width: 200px;
+    word-wrap: break-word;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1000;
+}
+
+#headingTab {
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+    background-color: #e0e0e0;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #bdbdbd;
+    z-index: 100;
+}
+
+.blockTabs {
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 16px;
+    border-bottom: 1px solid #bdbdbd;
+    color: black;
+    z-index: 100;
+}
+    .blockTabs:hover {
+        background-color: #bdbdbd;
+        text-decoration: none;
+        color: black;
+    }
+
+.blockTabInfo {
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 16px;
+    border-bottom: 1px solid #bdbdbd;
+    color: black;
+    z-index: 100;
+}
